@@ -34,5 +34,22 @@ namespace CSNMVC.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        /// <summary>
+        /// Created by Lowie, login server-side validations happen here
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public JsonResult GetUserCredentials(UserEntity obj)
+        {
+            UserEntity result = new UserEntity();
+
+            // logic dito na if wala sa db yung username pass, dapat di makakalogin, show ng error message sa front-end
+            // if meron, tuloy sa dashboard page
+            
+
+            return Json(result); 
+        }
     }
 }
