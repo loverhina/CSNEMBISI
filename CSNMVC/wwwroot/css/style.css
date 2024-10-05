@@ -1,0 +1,187 @@
+main {
+    margin-left: 10px; /* Adjust this value based on the width of your sidebar */
+    padding: 5px; /* Add padding for inner spacing */
+}
+
+body {
+	font-family: 'Montserrat', sans-serif; /* Set Montserrat as the default font */
+    display: flex; /* Enable flexbox layout */
+}
+
+.sidebar {
+    width: 200px; /* Set width for the sidebar */
+    background-color: #0AD1C8; /* Change background color for better contrast */
+    height: 100vh; /* Full height */
+    padding: 20px; /* Padding around the sidebar */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Optional shadow effect */
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+}
+
+.logo-container {
+    text-align: center; /* Center the logo and text */
+    margin-bottom: 20px; /* Space between the logo and nav items */
+}
+
+.logo {
+    width: 150px; /* Logo width */
+    height: 150px; /* Logo height */
+}
+
+.logo-text {
+    font-size: 24px; /* Font size for the text */
+    color: white; /* Text color */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    flex-grow: 1; /* Allow this section to grow */
+}
+
+li {
+    margin: 15px 0; /* Space between items */
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Change link color to white */
+    display: flex; /* Use flex to align icon and text */
+    align-items: center; /* Center align items vertically */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.nav-item {
+    margin-left: 5px; /* Space between icon and text */
+}
+
+/* Change color of both text and icon on hover */
+a:hover {
+    color: #FFD846; /* Change color of both text and icon on hover */
+}
+
+/* Pushes the bottom section to the bottom of the sidebar */
+.nav-bottom {
+    margin-top: auto; /* Ensures it stays at the bottom */
+}
+
+.designer-rectangle {
+    width: 1016px; /* Set width to 1016 pixels */
+    height: 541px; /* Set height to 758 pixels */
+    background-color: #9874BD; /* Background color */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    margin-top: 20px; /* Space above the rectangle */
+    display: flex; /* Flexbox to center content */
+    align-items: left; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+}
+
+/* Content section container */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* left sided content horizontally */
+    padding: 20px;
+    margin-left: 50px; /* Adjust to move the content away from the sidebar */
+    width: calc(100% - 120px); /* Adjust based on the sidebar */
+}
+
+/* Centered Title Styling */
+h1 {
+    font-size: 40px;
+    margin: 0;
+    text-align: left;
+    color: black;
+}
+
+/* Enroll Form Styling */
+.enroll-form {
+    width: 1014px; /* Adjusted for a more compact form */
+    height: 541px;
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.enroll-form label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.enroll-form input, 
+.enroll-form select, 
+.enroll-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.enroll-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.register-btn {
+    background-color: #28A745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    width: 177px;   /* Set the width of the button */
+    height: 49px;   /* Set the height of the button */
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-block; /* Ensure it acts like a button */
+    justify-content: flex-end;    /* Align items to the right */
+}
+
+.register-btn:hover {
+    background-color: #218838;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .enroll-form {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .enroll-form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

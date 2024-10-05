@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="~/css/styles.css" />
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="~/images/csnlogo.png"
+      />
+      <div class="headertextdiv">
+        <h1>Parañaque City Center</h1>
+        <h2>for Children with Special Needs</h2>
+      </div>
+    </div>
+
+    <div class="form">
+      <div class="login-container">
+        <div class="parentportal">PARENT PORTAL</div>
+        <div class="loginform">
+            <h2 class="login-title">LOGIN</h2>
+            <div class="input-group">
+                <label>CSN PARENT ID</label>
+                <input type="text" placeholder="CSN001" />
+            </div>
+            <div class="input-group">
+                <label>PASSWORD</label>
+                <input type="password" placeholder="********" />
+            </div>
+            <a href="@Url.Action("Index","Home")" class="login-btn">
+                <button class="login-btn">LOGIN</button>
+            </a>
+
+            <div class="registertext" onclick="window.location.href='Prereg.cshtml';" style="cursor: pointer;">
+                    <h1>Haven't registered yet? Sign up <a href="@Url.Action("Prereg", "PreReg")">here</a></h1>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <h1>Privacy Statement | Policy | Contact Us</h1>
+      <h2>2024 by CSN Paranaque. All Rights Reserved.</h2>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    font-family: 'Montserrat', sans-serif; /* Set Montserrat as the default font */
+}
+
+.sidebar {
+    min-width: 200px; /* Set minimum width for the sidebar */
+    background-color: #0AD1C8; /* Change background color for better contrast */
+    color: white; /* White text for the sidebar */
+    padding: 20px; /* Padding around the sidebar */
+    height: 100vh; /* Full height */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Optional shadow effect */
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+}
+
+.logo-container {
+    text-align: center; /* Center the logo and text */
+    margin-bottom: 20px; /* Space between the logo and nav items */
+}
+
+.logo {
+    width: 150px; /* Logo width */
+    height: 150px; /* Logo height */
+}
+
+.logo-text {
+    font-size: 24px; /* Font size for the text */
+    color: white; /* Text color */
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    flex-grow: 1; /* Allow this section to grow */
+}
+
+li {
+    margin: 15px 0; /* Space between items */
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Change link color to white */
+    display: flex; /* Use flex to align icon and text */
+    align-items: center; /* Center align items vertically */
+    transition: color 0.3s ease; /* Smooth transition effect */
+    padding: 10px; /* Padding for clickable area */
+}
+
+i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.nav-item {
+    margin-left: 5px; /* Space between icon and text */
+}
+
+/* Change color of both text and icon on hover */
+a:hover {
+    color: #FFD846; /* Change color of both text and icon on hover */
+}
+
+/* Styles for navigation links */
+.nav-link {
+    color: white; /* White text for links */
+}
+
+.nav-link:hover {
+    background-color: #495057; /* Darker background on hover */
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    background-color: #495057; /* Darker background for dropdown */
+}
+
+.dropdown-item {
+    color: white; /* White text for dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: #6c757d; /* Highlighted background on hover */
+}
+
+/* Content area styling */
+.content {
+    flex-grow: 1; /* Allow content to grow and fill space */
+    padding: 20px; /* Padding for the content area */
+    background-color: #f8f9fa; /* Light background for content area */
+}
+
+/* Designer Rectangle */
+.designer-rectangle {
+    width: 980px; /* Set width to 980 pixels */
+    height: 500px; /* Set height to 500 pixels */
+    background-color: #9874BD; /* Background color */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    margin-top: 20px; /* Space above the rectangle */
+    display: flex; /* Flexbox to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+}

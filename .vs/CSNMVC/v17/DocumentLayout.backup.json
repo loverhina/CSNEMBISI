@@ -1,0 +1,78 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mark\\source\\repos\\CSNMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\source\\repos\\csnmvc\\csnmvc\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\source\\repos\\csnmvc\\csnmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\source\\repos\\csnmvc\\csnmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Mark\\source\\repos\\CSNMVC\\CSNMVC\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "CSNMVC\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Mark\\source\\repos\\CSNMVC\\CSNMVC\\Models\\ApplicationDbContext.cs*",
+              "RelativeToolTip": "CSNMVC\\Models\\ApplicationDbContext.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T11:27:43.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mark\\source\\repos\\CSNMVC\\CSNMVC\\Program.cs",
+              "RelativeDocumentMoniker": "CSNMVC\\Program.cs",
+              "ToolTip": "C:\\Users\\Mark\\source\\repos\\CSNMVC\\CSNMVC\\Program.cs",
+              "RelativeToolTip": "CSNMVC\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T11:07:48.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Mark\\source\\repos\\CSNMVC\\CSNMVC\\appsettings.json",
+              "RelativeDocumentMoniker": "CSNMVC\\appsettings.json",
+              "ToolTip": "C:\\Users\\Mark\\source\\repos\\CSNMVC\\CSNMVC\\appsettings.json",
+              "RelativeToolTip": "CSNMVC\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-04T11:07:16.963Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+/* Request Page Styles */
+
+/* Main content area */
+main {
+    margin-left: 1px; /* Space for the sidebar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align everything to the left */
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+
+/* Align the h1 above the form */
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-left: 40px; /* Align the h1 with the form container */
+}
+
+/* Form container */
+.form-container {
+    background-color: #F4F4F4; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 1016px;
+    height: 437px;
+    border: 1px solid #E0E0E0;
+    margin-left: 40px; /* Align the form container to the left */
+    margin-top: 20px;
+}
+
+/* Labels for form fields */
+.form-container label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Input fields */
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 99%; /* Full width for inputs */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* The calendar input field */
+input[type="date"] {
+    padding-right: 10px; /* Space for calendar icon */
+}
+
+/* Submit button */
+.form-container button {
+    background-color: #FFFFFF;
+    color: #333;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    width: 177px;
+    height: 49px;
+    display: block;
+    float: right; /* Align the button to the right */
+    margin-right: 20px; /* Optional: Adjust margin for spacing */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+.form-container button:hover {
+    background-color: #F4F4F4;
+    color: #000;
+}
+
+/* Description textarea */
+textarea {
+    resize: none; /* Disable resizing */
+}

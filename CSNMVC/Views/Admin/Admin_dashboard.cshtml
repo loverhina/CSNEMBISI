@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles_admin.css"> <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo-container">
+            <img src="../images/csnlogo-removebg.png" alt="CSN Logo" class="logo">
+            <p class="logo-text">Parent Portal</p>
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-users"></i> Users</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="parentParticipationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-friends"></i> Parent Participation
+                </a>
+                <div class="dropdown-menu" aria-labelledby="parentParticipationDropdown">
+                    <a class="dropdown-item" href="#"><i class="fas fa-seminar"></i> Seminars</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-chalkboard-teacher"></i> Training</a>
+                    <a class="dropdown-item" href="#"><i class="fas fa-calendar-check"></i> Meetings</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-bullhorn"></i> Announcements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-calendar-plus"></i> Create Event</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-clock"></i> Pending Requests</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-check-circle"></i> Approve Registrations</a>
+            </li>
+        </ul>
+    </div>
+        
+        <!-- Statistics Section -->
+        <div class="container mt-4">
+            <h2 class="text-center">Dashboard</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-white bg-info mb-3">
+                        <div class="card-header">Total Parents</div>
+                        <div class="card-body">
+                            <h5 class="card-title">120</h5> <!-- Replace with dynamic data -->
+                            <p class="card-text">Total number of registered parents.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-warning mb-3">
+                        <div class="card-header">Pending Requests</div>
+                        <div class="card-body">
+                            <h5 class="card-title">15</h5> <!-- Replace with dynamic data -->
+                            <p class="card-text">Requests waiting for approval.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-danger mb-3">
+                        <div class="card-header">Pending Approvals</div>
+                        <div class="card-body">
+                            <h5 class="card-title">8</h5> <!-- Replace with dynamic data -->
+                            <p class="card-text">Registrations pending admin approval.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

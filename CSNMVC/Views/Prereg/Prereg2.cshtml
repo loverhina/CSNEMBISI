@@ -1,0 +1,307 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Pre-Registration Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles_prereg.css"> <!-- Linking external CSS file -->
+</head>
+<body class="container mt-5">
+
+    <!-- CSN Logo -->
+    <div class="text-center mb-4">
+        <img src="../images/csnlogo.png" alt="CSN Logo" class="img-fluid" style="max-width: 200px;">
+    </div>
+
+    <h2 class="text-center mb-4">Child Pre-Registration Form</h2>
+
+    <!-- Progress Indicator -->
+    <div class="progress mb-4">
+        <div class="progress-bar" style="width: 50%;" role="progressbar"></div>
+    </div>
+    <div class="text-center mb-4">
+        <small>Step 2: Family Information</small>
+    </div>
+
+    <form id="preregForm" method="post" action="@Url.Action("Prereg2", "Prereg")">
+
+        <!-- Mother's Information Section -->
+        <h3>Mother's Information</h3>
+        <div class="form-group">
+            <label for="maiden-name">Mother's Maiden Name</label>
+            <input type="text" class="form-control" id="maiden-name" name="maiden-name" placeholder="Enter mother's maiden name" required>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="mother-age">Age</label>
+                    <input type="number" class="form-control" id="mother-age" name="mother-age" min="0" placeholder="Enter age" required>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="mother-birthday">Birthday</label>
+                    <input type="date" class="form-control" id="mother-birthday" name="mother-birthday" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="mother-contact">Contact Number</label>
+                    <input type="tel" class="form-control" id="mother-contact" name="mother-contact" placeholder="Enter contact number" required>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="mother-work">Work</label>
+                    <input type="text" class="form-control" id="mother-work" name="mother-work" placeholder="Enter mother's work" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Father's Information Section -->
+        <h3>Father's Information</h3>
+        <div class="form-group">
+            <label for="father-name">Father's Name</label>
+            <input type="text" class="form-control" id="father-name" name="father-name" placeholder="Enter father's name" required>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="father-age">Age</label>
+                    <input type="number" class="form-control" id="father-age" name="father-age" min="0" placeholder="Enter age" required>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="father-birthday">Birthday</label>
+                    <input type="date" class="form-control" id="father-birthday" name="father-birthday" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="father-contact">Contact Number</label>
+                    <input type="tel" class="form-control" id="father-contact" name="father-contact" placeholder="Enter contact number" required>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="father-work">Work</label>
+                    <input type="text" class="form-control" id="father-work" name="father-work" placeholder="Enter father's work" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Both Parents Have a Job -->
+        <div class="form-group">
+            <label>Both Parents Have a Job:</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="both-parents-yes" name="both-parents-job" value="Yes" required>
+                <label class="form-check-label" for="both-parents-yes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="both-parents-no" name="both-parents-job" value="No" required>
+                <label class="form-check-label" for="both-parents-no">No</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="both-parents-solo" name="both-parents-job" value="Solo Parent" required>
+                <label class="form-check-label" for="both-parents-solo">Solo Parent</label>
+            </div>
+        </div>
+
+        <!-- Member of the Following Section -->
+        <div class="form-group">
+            <label>Member of the following:</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="sss" name="member" value="SSS">
+                <label class="form-check-label" for="sss">SSS</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="pwd" name="member" value="PWD">
+                <label class="form-check-label" for="pwd">PWD</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="4ps" name="member" value="4P's">
+                <label class="form-check-label" for="4ps">4P's</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="senior-citizen" name="member" value="Senior Citizen">
+                <label class="form-check-label" for="senior-citizen">Senior Citizen</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="pag-ibig" name="member" value="PAG-IBIG">
+                <label class="form-check-label" for="pag-ibig">PAG-IBIG</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="gsis" name="member" value="GSIS">
+                <label class="form-check-label" for="gsis">GSIS</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="solo-parent" name="member" value="Solo Parent">
+                <label class="form-check-label" for="solo-parent">Solo Parent</label>
+            </div>
+            <input type="text" class="form-control mt-2" id="other-input" name="other-input" placeholder="Specify if others">
+        </div>
+
+        <!-- Total Family Income Section -->
+        <div class="form-group">
+            <label for="total-income">Total Family Income Per Month (in PHP):</label>
+            <select class="form-control" id="total-income" name="total-income" required>
+                <option value="" disabled selected>Select Income Range</option>
+                <option value="below-14000">₱ Below 14,000</option>
+                <option value="14001-19040">₱ 14,001 - 19,040</option>
+                <option value="19041-38080">₱ 19,041 - 38,080</option>
+                <option value="38081-66640">₱ 38,081 - 66,640</option>
+                <option value="66641-114240">₱ 66,641 - 114,240</option>
+                <option value="114241-190400">₱ 114,241 - 190,400</option>
+            </select>
+        </div>
+
+        <!-- ID Numbers Section -->
+        <div class="form-section">
+            <div class="id-numbers-row">
+                <div class="id-number-field">
+                    <label for="school-pwd-id">School ID/PWD ID Number:</label>
+                    <input type="text" id="school-pwd-id" name="school-pwd-id" placeholder="Enter School ID/PWD ID Number" required>
+                </div>
+                <div class="id-number-field">
+                    <label for="government-id">Government ID Number:</label>
+                    <input type="text" id="government-id" name="government-id" placeholder="Enter Government ID Number" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Number of Family Members Section -->
+        <div class="form-group">
+            <label for="family-members">Number of Family Members:</label>
+            <input type="number" class="form-control" id="family-members" name="family-members" min="1" required>
+        </div>
+
+        <!-- Children Information Section -->
+        <div class="form-section">
+            <h3>Children Information</h3>
+            <div id="children-info">
+                <div class="child-entry">
+                    <div class="form-row mb-3">
+                        <div class="col-md-12">
+                            <label for="child-name">Name of Child:</label>
+                            <input type="text" class="form-control" id="child-name" name="child-name" placeholder="Enter child's name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row mb-3">
+                        <div class="col-md-4">
+                            <label for="child-age">Age:</label>
+                            <input type="number" class="form-control" id="child-age" name="child-age" min="0" placeholder="Enter child's age" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="sex">Sex</label>
+                            <div class="form-control">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="child-sex-male" name="child-sex" value="Male" required>
+                                    <label class="form-check-label" for="child-sex-male">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="child-sex-female" name="child-sex" value="Female" required>
+                                    <label class="form-check-label" for="child-sex-female">Female</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="educational-attainment">Educational Attainment:</label>
+                            <input type="text" class="form-control" id="educational-attainment" name="educational-attainment" placeholder="Enter educational attainment" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- + Button to Add More Children -->
+            <button type="button" id="add-child" class="btn btn-success add-btn">+ Add Another Child</button>
+        </div>
+
+        <!-- JavaScript to Handle Adding New Child Entries -->
+        <script>
+            document.getElementById('add-child').addEventListener('click', function() {
+                const childrenInfo = document.getElementById('children-info');
+                const newChildEntry = document.createElement('div');
+                newChildEntry.classList.add('child-entry');
+
+                newChildEntry.innerHTML = `
+                    <div class="form-row mb-3">
+                        <div class="col-md-12">
+                            <label for="child-name">Name of Child:</label>
+                            <input type="text" class="form-control" id="child-name" name="child-name" placeholder="Enter child's name" required>
+                        </div>
+                    </div>
+                    <div class="form-row mb-3">
+                        <div class="col-md-4">
+                            <label for="child-age">Age:</label>
+                            <input type="number" class="form-control" id="child-age" name="child-age" min="0" placeholder="Enter child's age" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="sex">Sex</label>
+                            <div class="form-control">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="child-sex-male" name="child-sex" value="Male" required>
+                                    <label class="form-check-label" for="child-sex-male">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="child-sex-female" name="child-sex" value="Female" required>
+                                    <label class="form-check-label" for="child-sex-female">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="educational-attainment">Educational Attainment:</label>
+                            <input type="text" class="form-control" id="educational-attainment" name="educational-attainment" placeholder="Enter educational attainment" required>
+                        </div>
+                    </div>
+                `;
+
+                childrenInfo.appendChild(newChildEntry);
+            });
+        </script>
+        <!-- Back and Next Buttons -->
+        <div class="form-row mb-3">
+            <div class="col-md-6 text-left">
+                <button type="button" class="btn btn-secondary" onclick="goBack()">Back</button>
+            </div>
+            <div class="col-md-6 text-right">
+                <button type="button" class="btn btn-primary" onclick="goNext()">Next</button>
+            </div>
+        </div>
+    </form>
+    <script>
+        function goBack() {
+            // Logic to go back to the previous page
+            window.history.back(); // This will take the user to the previous page
+        }
+
+        function goNext() {
+            console.log("Next button clicked!"); // Debugging line
+            // Optionally perform any necessary validation or data handling here
+            // Navigate to Prereg3 action
+            window.location.href = '@Url.Action("Prereg3", "Prereg")'; // This navigates to the Prereg3 action
+        }
+    </script>
+</body>
+</html>

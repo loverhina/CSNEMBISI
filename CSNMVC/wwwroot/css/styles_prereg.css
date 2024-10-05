@@ -1,0 +1,166 @@
+/* Center the logo */
+.logo {
+    display: block;
+    margin: 0 auto 20px; /* Adds bottom margin */
+    width: 20px; /* Set logo width */
+    height: 0px; /* Set logo height */
+}
+
+/* General form styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Using Montserrat font */
+}
+
+/* Styling for form groups, specifically for inline elements like radio buttons */
+.form-group {
+    display: flex;
+    flex-wrap: wrap; /* Ensures that the buttons wrap if space is insufficient */
+    gap: 10px; /* Adds spacing between the radio buttons */
+}
+
+.form-group .form-check-inline {
+    margin-right: 15px; /* Adjust spacing between the inline radio buttons */
+}
+
+.form-control {
+    width: 100%; /* Ensures the text input spans the full width */
+}
+
+/* Progress indicator styling */
+.progress-container {
+    margin-bottom: 20px; /* Space below the progress indicator */
+    max-width: 100%; /* Ensure it fits within the form width */
+    padding: 0 20px; /* Same padding as form */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between; /* Evenly space out the steps */
+}
+
+.progress-step {
+    flex: 1; /* Equal width for each step */
+    height: 10px; /* Height of each step */
+    background-color: #e0e0e0; /* Default background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.progress-step.active {
+    background-color: #4CAF50; /* Active step color */
+}
+
+.progress-text {
+    display: flex; /* Horizontal layout for labels */
+    justify-content: space-between; /* Space out the labels evenly */
+    margin-top: 5px; /* Space above labels */
+}
+
+.progress-label {
+    text-align: center; /* Center labels under each step */
+    flex: 1; /* Ensure labels take equal space */
+    margin-top: 5px; /* Space above each label for better readability */
+}
+
+/* Ensures the fields are aligned with consistent padding and margins */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select {
+    width: 100%; /* Ensures the input fields span the width of their container */
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+/* Ensures consistent styling for labels */
+label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Button styling */
+.next-button {
+    background-color: #4CAF50; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full-width button */
+    font-size: 16px; /* Font size */
+}
+
+.next-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Flexbox for name, sex, age section */
+.children-info {
+    display: flex;
+    flex-direction: column; /* Stack children information vertically */
+    gap: 15px; /* Space between child entries */
+}
+
+/* Style for radio buttons and labels inline */
+.radio-buttons {
+    display: flex;
+    align-items: center; /* Aligns the radio buttons with their labels */
+    gap: 15px; /* Space between radio buttons */
+}
+
+/* Styling for headers */
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Spacing for button container */
+.form-section {
+    margin-bottom: 15px; /* Space between sections */
+}
+
+/* General form section styling */
+.form-section {
+    margin-bottom: 15px;
+}
+
+/* Flexbox styling for ID Numbers row */
+.id-numbers-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for individual ID number fields */
+.id-number-field {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* Remove right margin from the last field */
+.id-number-field:last-child {
+    margin-right: 0;
+}
+
+/* Ensure input fields span the full width */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
