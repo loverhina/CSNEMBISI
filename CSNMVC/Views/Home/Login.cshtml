@@ -4,51 +4,68 @@
 
 <!DOCTYPE html>
 <link rel="stylesheet" href="~/css/styles.css" />
-
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-  </head>
-  <body>
+
+    <!-- Bootstrap Reference -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery Reference -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation//dist/jquery.validate.min.js"></script>
+
+    <!-- Custom JS for Login page -->
+    <script src="~/js/Home/Login.js"></script>
+
+</head>
+<body>
     <div class="header">
-      <img
-        src="~/images/csnlogo.png"
-      />
-      <div class="headertextdiv">
-        <h1>Parañaque City Center</h1>
-        <h2>for Children with Special Needs</h2>
-      </div>
+        <img src="~/images/csnlogo.png" />
+        <div class="headertextdiv">
+            <h1>Parañaque City Center</h1>
+            <h2>for Children with Special Needs</h2>
+        </div>
     </div>
 
-    <div class="form">
-      <div class="login-container">
-        <div class="parentportal">PARENT PORTAL</div>
-        <div class="loginform">
-            <h2 class="login-title">LOGIN</h2>
-            <div class="input-group">
-                <label>CSN PARENT ID</label>
-                <input type="text" placeholder="CSN001" />
-            </div>
-            <div class="input-group">
-                <label>PASSWORD</label>
-                <input type="password" placeholder="********" />
-            </div>
-            <a href="@Url.Action("Index","Home")" class="login-btn">
-                <button class="login-btn">LOGIN</button>
-            </a>
+    <form id="formLogin" class="form">
+        <div class="login-container">
+            <div class="parentportal">PARENT PORTAL</div>
+            <div class="loginform">
+                <h2 class="login-title">LOGIN</h2>
 
-            <div class="registertext" onclick="window.location.href='Prereg.cshtml';" style="cursor: pointer;">
+                <!-- added by Lowie, will be populated with a validation message through JS -->
+                <div id="divErrorMsg"></div>
+
+                <div class="input-group">
+                    <label>CSN PARENT ID</label>
+                    <input id="inputUsername" name="inputUsername" type="text" placeholder="CSN001" />
+                </div>
+                <div class="input-group">
+                    <label>PASSWORD</label>
+                    <input id="inputPassword" name="inputPassword" type="password" placeholder="********" />
+                </div>
+
+                <!-- New button for login -->
+                <button id="btnLogin" name="btnLogin" type="button" class="login-btn">LOGIN</button>
+
+                <!-- commented by Lowie -->
+                @* <a href="@Url.Action("Index","Home")" class="login-btn">
+                <button class="login-btn">LOGIN</button>
+                </a> *@
+
+                <div class="registertext" onclick="window.location.href='Prereg.cshtml';" style="cursor: pointer;">
                     <h1>Haven't registered yet? Sign up <a href="@Url.Action("Prereg", "PreReg")">here</a></h1>
+                </div>
             </div>
         </div>
-      </div>
-    </div>
+    </form>
 
     <div class="footer">
-      <h1>Privacy Statement | Policy | Contact Us</h1>
-      <h2>2024 by CSN Paranaque. All Rights Reserved.</h2>
+        <h1>Privacy Statement | Policy | Contact Us</h1>
+        <h2>2024 by CSN Paranaque. All Rights Reserved.</h2>
     </div>
-  </body>
+</body>
 </html>
