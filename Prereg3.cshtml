@@ -1,0 +1,155 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Pre-Registration Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles_prereg.css"> <!-- Linking external CSS file -->
+</head>
+<body class="container mt-5">
+
+        <!-- CSN Logo -->
+        <div class="text-center mb-4">
+            <img src="../images/csnlogo.png" alt="CSN Logo" class="img-fluid" style="max-width: 200px;">
+        </div>
+
+    <h2 class="text-center mb-4">Child Pre-Registration Form</h2>
+
+    <!-- Progress Indicator -->
+    <div class="progress mb-4">
+        <div class="progress-bar" style="width: 75%;" role="progressbar"></div>
+    </div>
+    <div class="text-center mb-4">
+        <small>Step 3: About Disability</small>
+    </div>
+
+     <form id="preregForm" class="needs-validation" novalidate>
+
+        <!-- Regular Check-Up Section -->
+        <div class="form-group mb-3">
+            <label>Regular Check-Up:</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="checkup-yes" name="regular-checkup" value="Yes" required>
+                <label class="form-check-label" for="checkup-yes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="checkup-no" name="regular-checkup" value="No" required>
+                <label class="form-check-label" for="checkup-no">No</label>
+            </div>
+        </div>
+
+        <!-- Medicine Currently Being Taken Section -->
+        <div class="form-group mb-3">
+            <label for="medicine">Medicine/s that is/are currently being taken by the child:</label>
+            <input type="text" class="form-control" id="medicine" name="medicine" placeholder="Enter medicine/s">
+        </div>
+
+        <!-- Does the Child Have Illness Section -->
+        <div class="form-group mb-3">
+            <label>Does the child have other illness?</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="illness-yes" name="child-illness" value="Yes" required>
+                <label class="form-check-label" for="illness-yes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="illness-no" name="child-illness" value="No" required>
+                <label class="form-check-label" for="illness-no">No</label>
+            </div>
+        </div>
+
+        <!-- Illness Details Input -->
+        <div class="form-group mb-3" id="illness-details" style="display:none;">
+            <label for="illness-info">Please specify the illness:</label>
+            <input type="text" class="form-control" id="illness-info" name="illness-info" placeholder="Enter illness details">
+        </div>
+
+        <!-- Difficulties Section -->
+        <div class="form-group mb-3">
+            <label for="difficulty">Describe where the person with a disability is having difficulties. Select all that apply:</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="difficulty-movement" name="difficulty" value="Movement">
+                <label class="form-check-label" for="difficulty-movement">Movement</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="difficulty-senses" name="difficulty" value="Senses">
+                <label class="form-check-label" for="difficulty-senses">Senses</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="difficulty-behavior" name="difficulty" value="Behavior/Conduct">
+                <label class="form-check-label" for="difficulty-behavior">Behavior/Conduct</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="difficulty-thinking" name="difficulty" value="Thinking">
+                <label class="form-check-label" for="difficulty-thinking">Thinking</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="difficulty-speaking" name="difficulty" value="Speaking/Communication">
+                <label class="form-check-label" for="difficulty-speaking">Speaking/Communication</label>
+            </div>
+            <div id="difficulty-error" class="text-danger" style="display:none;">Please select at least one difficulty.</div>
+        </div>
+
+        <!-- Back and Next Buttons -->
+        <div class="form-row mb-3">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-secondary" onclick="goBack()">Back</button>
+            </div>
+            <div class="col-md-6 text-right">
+                <button type="button" class="btn btn-primary" onclick="goNext()">Next</button>
+            </div>
+        </div>
+
+    </form>
+    <script>
+        function goBack() {
+            window.history.back(); // Take the user to the previous page
+        }
+
+        function goNext() {
+            // Get the form element
+            var form = document.getElementById('preregForm');
+
+            // Add Bootstrap validation styling
+            form.classList.add('was-validated');
+
+            // Check if the form is valid
+            if (!form.checkValidity()) {
+                return; // Stop the function if validation fails
+            }
+
+            // Check if at least one checkbox in the difficulties section is checked
+            const checkboxes = document.querySelectorAll('input[name="difficulty"]');
+            const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+            const errorMessage = document.getElementById('difficulty-error');
+
+            // Display error message if no checkbox is checked
+            if (!isChecked) {
+                errorMessage.style.display = 'block'; // Show error message
+                return; // Stop the function if no checkbox is checked
+            } else {
+                errorMessage.style.display = 'none'; // Hide error message
+            }
+
+            // Navigate to Prereg4 action
+            window.location.href = '@Url.Action("Prereg4", "Prereg")'; // This navigates to the Prereg4 action
+        }
+
+        // Show illness details input based on the selection
+        document.querySelectorAll('input[name="child-illness"]').forEach((elem) => {
+            elem.addEventListener("change", function (event) {
+                const illnessDetails = document.getElementById('illness-details');
+                illnessDetails.style.display = event.target.value === 'Yes' ? 'block' : 'none';
+            });
+        });
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

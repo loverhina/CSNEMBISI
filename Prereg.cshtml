@@ -1,0 +1,181 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Pre-Registration Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/styles_prereg.css"> <!-- Linking external CSS file -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <!-- Prereg JS -->
+    <script src="~/js/PreReg/Prereg.js"></script>
+</head>
+<body class="container mt-5">
+
+    <!-- CSN Logo -->
+    <div class="text-center mb-4">
+        <img src="~/images/csnlogo.png" alt="CSN Logo" class="img-fluid" style="max-width: 200px;">
+    </div>
+
+    <h2 class="text-center mb-4">Child Pre-Registration Form</h2>
+    <!-- Progress Indicator -->
+    <div class="progress mb-4">
+        <div class="progress-bar" style="width: 25%;" role="progressbar"></div>
+    </div>
+    <div class="text-center mb-4">
+        <small>Step 1: Child Information</small>
+    </div>
+
+    <form id="preregForm" class="needs-validation" novalidate>
+        <!-- Child Name Section -->
+        <div class="form-row mb-3">
+            <div class="col-md-4">
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" name="surname" class="form-control" placeholder="Enter surname" required>
+            </div>
+            <div class="col-md-4">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" class="form-control" placeholder="Enter first name" required>
+            </div>
+            <div class="col-md-4">
+                <label for="middle-name">Middle Name</label>
+                <input type="text" id="middle-name" name="middle-name" class="form-control" placeholder="Enter middle name">
+            </div>
+        </div>
+
+        <!-- Personal Section: Sex, Birthday, Age -->
+        <div class="form-row mb-3">
+            <div class="col-md-4">
+                <label for="sex">Sex</label>
+                <div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="male" name="sex" value="male" required>
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="female" name="sex" value="female" required>
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="birthday">Birthday</label>
+                <input type="date" id="birthday" name="birthday" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" class="form-control" min="0" placeholder="Enter child's age" required>
+            </div>
+        </div>
+
+        <!-- Address and Barangay Section -->
+        <div class="form-row mb-3">
+            <div class="col-md-8">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" class="form-control" placeholder="Enter full address" required>
+            </div>
+            <div class="col-md-4">
+                <label for="barangay">Barangay</label>
+                <input type="text" id="barangay" name="barangay" class="form-control" placeholder="Enter barangay" required>
+            </div>
+        </div>
+
+        <!-- Diagnosis Section -->
+        <div class="form-group mb-3">
+            <label for="diagnosis">Diagnosis (according to developmental assessment)</label>
+            <input type="text" id="diagnosis" name="diagnosis" class="form-control" placeholder="Enter diagnosis" required>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="form-row mb-3">
+            <div class="col-md-6">
+                <label for="contact">Contact Number</label>
+                <input type="number" id="contact" name="contact" class="form-control" placeholder="Enter contact number" required>
+            </div>
+            <div class="col-md-6">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter email" required>
+            </div>
+        </div>
+
+        <!-- Attach Picture Section -->
+        <div class="form-group mb-3">
+            <label for="child-pic">Attach Picture of Child</label>
+            <input type="file" id="child-pic" name="child-pic" class="form-control-file" accept="image/*" required>
+        </div>
+
+        <!-- Back and Next Buttons -->
+        <div class="form-row mb-3">
+            <div class="col-md-6 text-left">
+                <button type="button" class="btn btn-secondary" onclick="goBack()">Back</button>
+            </div>
+            <div class="col-md-6 text-right">
+                <button type="button" class="btn btn-primary" onclick="goNext()">Next</button>
+            </div>
+        </div>
+    </form>
+     
+    <!-- Validation -->
+    <script>
+        function goBack() {
+            window.history.back(); // Take the user to the previous page
+        }
+
+        function goNext() {
+            // Get the form element
+            var form = document.getElementById('preregForm');
+
+            // Add Bootstrap validation styling
+            form.classList.add('was-validated');
+
+            // Check if the form is valid
+            if (!form.checkValidity()) {
+                return; // Stop the function if validation fails
+            }
+
+            // Validate the picture file
+            var fileInput = document.getElementById('child-pic');
+            var file = fileInput.files[0];
+
+            if (!file) {
+                fileInput.classList.add('is-invalid');
+                return;
+            } else {
+                fileInput.classList.remove('is-invalid');
+            }
+
+            // Check file type
+            if (!file.type.startsWith('image/')) {
+                fileInput.classList.add('is-invalid');
+                alert('Please upload a valid image file.');
+                return;
+            }
+
+            // Check file size (e.g., 2MB max)
+            var maxSize = 2 * 1024 * 1024; // 2MB in bytes
+            if (file.size > maxSize) {
+                fileInput.classList.add('is-invalid');
+                alert('The attached file is too large. Please upload an image smaller than 2MB.');
+                return;
+            } else {
+                fileInput.classList.remove('is-invalid');
+                fileInput.classList.add('is-valid');
+            }
+
+            // If the form is valid, proceed to the next page
+            window.location.href = '@Url.Action("Prereg2", "Prereg")'; // Change to the actual next page URL
+        }
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
