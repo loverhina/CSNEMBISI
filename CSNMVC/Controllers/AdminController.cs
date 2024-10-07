@@ -8,5 +8,10 @@ namespace CSNMVC.Controllers
         {
             return View();
         }
+
+        public IActionResult Pendingreqs()
+        {
+            return View();
+        }
     }
 }

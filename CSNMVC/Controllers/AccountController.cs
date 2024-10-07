@@ -4,10 +4,6 @@ namespace CSNMVC.Controllers
 {
     public class AccountController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
 
         public IActionResult Enroll()
         {

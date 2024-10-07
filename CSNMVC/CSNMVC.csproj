@@ -8,14 +8,17 @@
 
   <ItemGroup>
     <Content Remove="Views\Admin\Admin_dashboard.cshtml" />
+    <Content Remove="Views\Admin\Pendingreqs.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Views\Admin\Admin_dashboard.cshtml" />
+    <None Include="Views\Admin\Pendingreqs.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Npgsql" Version="8.0.4" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.8" />
   </ItemGroup>

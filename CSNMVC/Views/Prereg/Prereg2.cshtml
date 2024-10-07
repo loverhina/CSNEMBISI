@@ -1,4 +1,6 @@
-﻿@{
+﻿@model CSNMVC.Models.ViewModels.ChildPreregistrationViewModel
+
+@{
     Layout = null;
 }
 
@@ -11,6 +13,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles_prereg.css"> <!-- Linking external CSS file -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/js/Prereg/Prereg2.js"></script>
 </head>
 <body class="container mt-5">
 
@@ -35,21 +40,26 @@
         <h3>Mother's Information</h3>
         <div class="form-group">
             <label for="maiden-name">Mother's Maiden Name</label>
-            <input type="text" class="form-control" id="maiden-name" name="maiden-name" placeholder="Enter mother's maiden name" required>
+            <input type="text" class="form-control" id="maiden-name" name="maiden-name"
+                   placeholder="Enter mother's maiden name" required
+                   value="@Model.MotherMaidenName">
         </div>
 
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="mother-age">Age</label>
-                    <input type="number" class="form-control" id="mother-age" name="mother-age" min="0" placeholder="Enter age" required>
+                    <input type="number" class="form-control" id="mother-age" name="mother-age"
+                           min="0" placeholder="Enter age" required
+                           value="@Model.MotherAge">
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="mother-birthday">Birthday</label>
-                    <input type="date" class="form-control" id="mother-birthday" name="mother-birthday" required>
+                    <input type="date" class="form-control" id="mother-birthday" name="mother-birthday"
+                           required value="@Model.MotherBirthday?.ToString("yyyy-MM-dd")">
                 </div>
             </div>
         </div>
@@ -58,14 +68,18 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="mother-contact">Contact Number</label>
-                    <input type="tel" class="form-control" id="mother-contact" name="mother-contact" placeholder="Enter contact number" required>
+                    <input type="tel" class="form-control" id="mother-contact" name="mother-contact"
+                           placeholder="Enter contact number" required
+                           value="@Model.MotherContact">
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="mother-work">Work</label>
-                    <input type="text" class="form-control" id="mother-work" name="mother-work" placeholder="Enter mother's work" required>
+                    <input type="text" class="form-control" id="mother-work" name="mother-work"
+                           placeholder="Enter mother's work" required
+                           value="@Model.MotherWork">
                 </div>
             </div>
         </div>
@@ -74,21 +88,21 @@
         <h3>Father's Information</h3>
         <div class="form-group">
             <label for="father-name">Father's Name</label>
-            <input type="text" class="form-control" id="father-name" name="father-name" placeholder="Enter father's name" required>
+            <input type="text" class="form-control" id="father-name" name="father-name" placeholder="Enter father's name" required value="@Model.FatherName">
         </div>
 
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="father-age">Age</label>
-                    <input type="number" class="form-control" id="father-age" name="father-age" min="0" placeholder="Enter age" required>
+                    <input type="number" class="form-control" id="father-age" name="father-age" min="0" placeholder="Enter age" required value="@Model.FatherAge">
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="father-birthday">Birthday</label>
-                    <input type="date" class="form-control" id="father-birthday" name="father-birthday" required>
+                    <input type="date" class="form-control" id="father-birthday" name="father-birthday" required value="@Model.FatherBirthday?.ToString("yyyy-MM-dd")">
                 </div>
             </div>
         </div>
@@ -97,31 +111,32 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="father-contact">Contact Number</label>
-                    <input type="tel" class="form-control" id="father-contact" name="father-contact" placeholder="Enter contact number" required>
+                    <input type="tel" class="form-control" id="father-contact" name="father-contact" placeholder="Enter contact number" required value="@Model.FatherContact">
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="father-work">Work</label>
-                    <input type="text" class="form-control" id="father-work" name="father-work" placeholder="Enter father's work" required>
+                    <input type="text" class="form-control" id="father-work" name="father-work" placeholder="Enter father's work" required value="@Model.FatherWork">
                 </div>
             </div>
         </div>
+
 
         <!-- Both Parents Have a Job -->
         <div class="form-group">
             <label>Both Parents Have a Job:</label>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="both-parents-yes" name="both-parents-job" value="Yes" required>
+                <input class="form-check-input" type="radio" id="both-parents-yes" name="both-parents-job" value="Yes" @(Model.BothParentsJob ? "checked" : "") required>
                 <label class="form-check-label" for="both-parents-yes">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="both-parents-no" name="both-parents-job" value="No" required>
+                <input class="form-check-input" type="radio" id="both-parents-no" name="both-parents-job" value="No" @(!Model.BothParentsJob && !Model.SoloParent ? "checked" : "") required>
                 <label class="form-check-label" for="both-parents-no">No</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="both-parents-solo" name="both-parents-job" value="Solo Parent" required>
+                <input class="form-check-input" type="radio" id="both-parents-solo" name="both-parents-job" value="Solo Parent" @(Model.SoloParent ? "checked" : "") required>
                 <label class="form-check-label" for="both-parents-solo">Solo Parent</label>
             </div>
         </div>
@@ -130,31 +145,31 @@
         <div class="form-group">
             <label>Member of the following:</label>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="sss" name="member" value="SSS">
+                <input class="form-check-input" type="radio" id="sss" name="member" value="SSS" @(Model.MemberOfPrograms == "SSS" ? "checked" : "")>
                 <label class="form-check-label" for="sss">SSS</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="pwd" name="member" value="PWD">
+                <input class="form-check-input" type="radio" id="pwd" name="member" value="PWD" @(Model.MemberOfPrograms == "PWD" ? "checked" : "")>
                 <label class="form-check-label" for="pwd">PWD</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="4ps" name="member" value="4P's">
+                <input class="form-check-input" type="radio" id="4ps" name="member" value="4P's" @(Model.MemberOfPrograms == "4P's" ? "checked" : "")>
                 <label class="form-check-label" for="4ps">4P's</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="senior-citizen" name="member" value="Senior Citizen">
+                <input class="form-check-input" type="radio" id="senior-citizen" name="member" value="Senior Citizen" @(Model.MemberOfPrograms == "Senior Citizen" ? "checked" : "")>
                 <label class="form-check-label" for="senior-citizen">Senior Citizen</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="pag-ibig" name="member" value="PAG-IBIG">
+                <input class="form-check-input" type="radio" id="pag-ibig" name="member" value="PAG-IBIG" @(Model.MemberOfPrograms == "PAG-IBIG" ? "checked" : "")>
                 <label class="form-check-label" for="pag-ibig">PAG-IBIG</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="gsis" name="member" value="GSIS">
+                <input class="form-check-input" type="radio" id="gsis" name="member" value="GSIS" @(Model.MemberOfPrograms == "GSIS" ? "checked" : "")>
                 <label class="form-check-label" for="gsis">GSIS</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="solo-parent" name="member" value="Solo Parent">
+                <input class="form-check-input" type="radio" id="solo-parent" name="member" value="Solo Parent" @(Model.MemberOfPrograms == "Solo Parent" ? "checked" : "")>
                 <label class="form-check-label" for="solo-parent">Solo Parent</label>
             </div>
             <input type="text" class="form-control mt-2" id="other-input" name="other-input" placeholder="Specify if others">
@@ -165,12 +180,12 @@
             <label for="total-income">Total Family Income Per Month (in PHP):</label>
             <select class="form-control" id="total-income" name="total-income" required>
                 <option value="" disabled selected>Select Income Range</option>
-                <option value="below-14000">₱ Below 14,000</option>
-                <option value="14001-19040">₱ 14,001 - 19,040</option>
-                <option value="19041-38080">₱ 19,041 - 38,080</option>
-                <option value="38081-66640">₱ 38,081 - 66,640</option>
-                <option value="66641-114240">₱ 66,641 - 114,240</option>
-                <option value="114241-190400">₱ 114,241 - 190,400</option>
+                <option value="below-14000" @(Model.FamilyIncome == "below-14000" ? "selected" : "")>₱ Below 14,000</option>
+                <option value="14001-19040" @(Model.FamilyIncome == "14001-19040" ? "selected" : "")>₱ 14,001 - 19,040</option>
+                <option value="19041-38080" @(Model.FamilyIncome == "19041-38080" ? "selected" : "")>₱ 19,041 - 38,080</option>
+                <option value="38081-66640" @(Model.FamilyIncome == "38081-66640" ? "selected" : "")>₱ 38,081 - 66,640</option>
+                <option value="66641-114240" @(Model.FamilyIncome == "66641-114240" ? "selected" : "")>₱ 66,641 - 114,240</option>
+                <option value="114241-190400" @(Model.FamilyIncome == "114241-190400" ? "selected" : "")>₱ 114,241 - 190,400</option>
             </select>
         </div>
 
@@ -194,6 +209,7 @@
             <input type="number" class="form-control" id="family-members" name="family-members" min="1" required>
         </div>
 
+
         <!-- Children Information Section -->
         <div class="form-section">
             <h3>Children Information</h3>
@@ -202,25 +218,35 @@
                     <div class="form-row mb-3">
                         <div class="col-md-12">
                             <label for="child-name">Name of Child:</label>
-                            <input type="text" class="form-control" id="child-name" name="child-name" placeholder="Enter child's name" required>
+                            <input type="text" class="form-control" id="child-name" name="child-name"
+                                   placeholder="Enter child's name" required
+                                   value="@Model.ChildName">
                         </div>
                     </div>
 
                     <div class="form-row mb-3">
                         <div class="col-md-4">
                             <label for="child-age">Age:</label>
-                            <input type="number" class="form-control" id="child-age" name="child-age" min="0" placeholder="Enter child's age" required>
+                            <input type="number" class="form-control" id="child-age" name="child-age"
+                                   min="0" placeholder="Enter child's age" required
+                                   value="@Model.Child_Age">
                         </div>
 
                         <div class="col-md-4">
                             <label for="sex">Sex</label>
                             <div class="form-control">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="child-sex-male" name="child-sex" value="Male" required>
+                                    <input class="form-check-input" type="radio"
+                                           id="child-sex-male" name="child-sex"
+                                           value="Male" required
+                                    @(Model.Child_Sex == "Male" ? "checked" : "")>
                                     <label class="form-check-label" for="child-sex-male">Male</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="child-sex-female" name="child-sex" value="Female" required>
+                                    <input class="form-check-input" type="radio"
+                                           id="child-sex-female" name="child-sex"
+                                           value="Female" required
+                                    @(Model.Child_Sex == "Female" ? "checked" : "")>
                                     <label class="form-check-label" for="child-sex-female">Female</label>
                                 </div>
                             </div>
@@ -228,80 +254,34 @@
 
                         <div class="col-md-4">
                             <label for="educational-attainment">Educational Attainment:</label>
-                            <input type="text" class="form-control" id="educational-attainment" name="educational-attainment" placeholder="Enter educational attainment" required>
+                            <input type="text" class="form-control" id="educational-attainment"
+                                   name="educational-attainment"
+                                   placeholder="Enter educational attainment" required
+                                   value="@Model.EducationalAttainment">
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- + Button to Add More Children -->
+
+        <!-- + Button to Add More Children -->
+        <div>
             <button type="button" id="add-child" class="btn btn-success add-btn">+ Add Another Child</button>
         </div>
 
-        <!-- JavaScript to Handle Adding New Child Entries -->
-        <script>
-            document.getElementById('add-child').addEventListener('click', function() {
-                const childrenInfo = document.getElementById('children-info');
-                const newChildEntry = document.createElement('div');
-                newChildEntry.classList.add('child-entry');
-
-                newChildEntry.innerHTML = `
-                    <div class="form-row mb-3">
-                        <div class="col-md-12">
-                            <label for="child-name">Name of Child:</label>
-                            <input type="text" class="form-control" id="child-name" name="child-name" placeholder="Enter child's name" required>
-                        </div>
-                    </div>
-                    <div class="form-row mb-3">
-                        <div class="col-md-4">
-                            <label for="child-age">Age:</label>
-                            <input type="number" class="form-control" id="child-age" name="child-age" min="0" placeholder="Enter child's age" required>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="sex">Sex</label>
-                            <div class="form-control">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="child-sex-male" name="child-sex" value="Male" required>
-                                    <label class="form-check-label" for="child-sex-male">Male</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="child-sex-female" name="child-sex" value="Female" required>
-                                    <label class="form-check-label" for="child-sex-female">Female</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <label for="educational-attainment">Educational Attainment:</label>
-                            <input type="text" class="form-control" id="educational-attainment" name="educational-attainment" placeholder="Enter educational attainment" required>
-                        </div>
-                    </div>
-                `;
-
-                childrenInfo.appendChild(newChildEntry);
-            });
-        </script>
         <!-- Back and Next Buttons -->
         <div class="form-row mb-3">
             <div class="col-md-6 text-left">
-                <button type="button" class="btn btn-secondary" onclick="goBack()">Back</button>
+                <button type="button" id="back-button" class="btn btn-secondary">Back</button>
             </div>
             <div class="col-md-6 text-right">
-                <button type="button" class="btn btn-primary" onclick="goNext()">Next</button>
+                <button type="button" id="next-button" class="btn btn-primary">Next</button>
             </div>
         </div>
     </form>
-    <script>
-        function goBack() {
-            // Logic to go back to the previous page
-            window.history.back(); // This will take the user to the previous page
-        }
-
-        function goNext() {
-            console.log("Next button clicked!"); // Debugging line
-            // Optionally perform any necessary validation or data handling here
-            // Navigate to Prereg3 action
-            window.location.href = '@Url.Action("Prereg3", "Prereg")'; // This navigates to the Prereg3 action
-        }
-    </script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

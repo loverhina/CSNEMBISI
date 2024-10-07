@@ -2,124 +2,125 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.InteropServices;
 
-namespace CSNMVC.Models  
+namespace CSNMVC.Models
 {
     // Entity class for child preregistration
     [Table("child_preregistration")]  // Maps to the PostgreSQL table name
-    public class ChildPreregistration(string childSname, string childFname, string childMname, int childAge, string childSex, DateTime birthday, string address, string barangay, string diagnosis, string contactnumber, string email, byte[] picture, string mothermaidenname, int motherage, DateTime motherBirthday, string motherContact, string motherWork, string fathername, int fatherAge, DateTime fatherBirthday, string fatherContact, string fatherWork, bool bothParentsJob, bool soloParent, string memberOfPrograms, string familyIncome, string siblingsInfo, bool regularCheckup, string medicine, bool illness, string disabilityDifficulties, string schoolName, string gradeLevel, string classType, string classSchedule, string therapySchedule)
-
+    public class ChildPreregistration
     {
         [Key]
         public int Id { get; set; }
 
         [Column("child_sname")]
         [StringLength(255)]
-        public string ChildSname { get; set; } = childSname;
+        public string ChildSname { get; set; }
 
         [Column("child_fname")]
         [StringLength(255)]
-        public string ChildFname { get; set; } = childFname;
+        public string ChildFname { get; set; }
 
         [Column("child_mname")]
         [StringLength(255)]
-        public string ChildMname { get; set; } = childMname;
+        public string ChildMname { get; set; }
 
-        public int ChildAge { get; set; } = childAge;
+        public int ChildAge { get; set; }
 
         [Column("child_sex")]
-        [StringLength(10)]
-        public string ChildSex { get; set; } = childSex;
+        public bool ChildSex { get; set; }
 
-        public DateTime Birthday { get; set; } = birthday;
-
-        [StringLength(255)]
-        public string Address { get; set; } = address;
+        public DateTime Birthday { get; set; }
 
         [StringLength(255)]
-        public string Barangay { get; set; } = barangay;
+        public string Address { get; set; }
 
-        public string Diagnosis { get; set; } = diagnosis;
+        [StringLength(255)]
+        public string Barangay { get; set; }
+
+        public string Diagnosis { get; set; }
 
         [Column("contact_number")]
         [StringLength(255)]
-        public string ContactNumber { get; set; } = contactnumber;
+        public string ContactNumber { get; set; }
 
         [StringLength(255)]
-        public string Email { get; set; } = email;
+        public string Email { get; set; }
 
-        public byte[] Picture { get; set; } = picture;
+        public byte[] Picture { get; set; }
 
         [Column("mother_maiden_name")]
         [StringLength(255)]
-        public string MotherMaidenName { get; set; } = mothermaidenname;
+        public string MotherMaidenName { get; set; }
 
-        public int? MotherAge { get; set; } = motherage;
+        public int? MotherAge { get; set; }
 
-        public DateTime? MotherBirthday { get; set; } = motherBirthday;
+        public DateTime? MotherBirthday { get; set; }
 
         [Column("mother_contact")]
         [StringLength(255)]
-        public string MotherContact { get; set; } = motherContact;
+        public string MotherContact { get; set; }
 
         [StringLength(255)]
-        public string MotherWork { get; set; } = motherWork;
+        public string MotherWork { get; set; }
 
         [Column("father_name")]
         [StringLength(255)]
-        public string FatherName { get; set; } = fathername;
+        public string FatherName { get; set; }
 
-        public int? FatherAge { get; set; } = fatherAge;
+        public int? FatherAge { get; set; }
 
-        public DateTime? FatherBirthday { get; set; } = fatherBirthday;
+        public DateTime? FatherBirthday { get; set; }
 
         [Column("father_contact")]
         [StringLength(255)]
-        public string FatherContact { get; set; } = fatherContact;
+        public string FatherContact { get; set; }
 
         [StringLength(255)]
-        public string FatherWork { get; set; } = fatherWork;
+        public string FatherWork { get; set; }
 
-        public bool BothParentsJob { get; set; } = bothParentsJob;
+        public bool BothParentsJob { get; set; }
 
-        public bool SoloParent { get; set; } = soloParent;
-
-        [StringLength(255)]
-        public string MemberOfPrograms { get; set; } = memberOfPrograms;
+        public bool SoloParent { get; set; }
 
         [StringLength(255)]
-        public string FamilyIncome { get; set; } = familyIncome;
-
-        public string SiblingsInfo { get; set; } = siblingsInfo;
-
-        public bool RegularCheckup { get; set; } = regularCheckup;
+        public string MemberOfPrograms { get; set; }
 
         [StringLength(255)]
-        public string Medicines { get; set; } = medicine;
+        public string FamilyIncome { get; set; }
 
-        public bool Illness { get; set; } = illness;
+        public string SiblingsInfo { get; set; }
+        // Navigation property for related ChildInfo records
+        public ICollection<ChildInfo> ChildInfos { get; set; } = new List<ChildInfo>();  // Navigation property to ChildInfo
 
-        public string DisabilityDifficulties { get; set; } = disabilityDifficulties;
+        public bool RegularCheckup { get; set; }
+
+        [StringLength(255)]
+        public string Medicines { get; set; }
+
+        public bool Illness { get; set; }
+
+        public string DisabilityDifficulties { get; set; }
 
         [Column("school_name")]
         [StringLength(255)]
-        public string SchoolName { get; set; } = schoolName;
+        public string SchoolName { get; set; }
 
         [StringLength(50)]
-        public string GradeLevel { get; set; } = gradeLevel;
+        public string GradeLevel { get; set; }
 
         [StringLength(50)]
-        public string ClassType { get; set; } = classType;
+        public string ClassType { get; set; }
 
         [StringLength(255)]
-        public string ClassSchedule { get; set; } = classSchedule;
+        public string ClassSchedule { get; set; }
 
         [StringLength(50)]
-        public string TherapySchedule { get; set; } = therapySchedule;
+        public string TherapySchedule { get; set; }
 
         [StringLength(50)]
         public string Status { get; set; } = "Pending";
+
+        // Default constructor is automatically provided if not defined
     }
 
     // ApplicationDbContext class
@@ -133,5 +134,18 @@ namespace CSNMVC.Models
 
         // Define DbSet properties for your database tables
         public DbSet<ChildPreregistration> ChildPreregistrations { get; set; }  // Add the DbSet for ChildPreregistration
+        public DbSet<ChildInfo> ChildInfos { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Configure one-to-many relationship between ChildPreregistration and ChildInfo
+            modelBuilder.Entity<ChildInfo>()
+                .HasOne(ci => ci.ChildPreregistration)
+                .WithMany(cp => cp.ChildInfos)
+                .HasForeignKey(ci => ci.ChildPreregistrationId)
+                .OnDelete(DeleteBehavior.Cascade);  // Optional: configure cascading delete
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

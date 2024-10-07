@@ -1,111 +1,163 @@
+/* General Styling */
 body {
-    display: flex;
     font-family: 'Montserrat', sans-serif; /* Set Montserrat as the default font */
+    font-size: 12px; /* Set default font size to 12px */
+    display: flex; /* Enable flexbox layout */
+    height: 100vh; /* Make body take full height */
+    margin: 0; /* Remove default margin */
 }
 
+/* Sidebar styling */
 .sidebar {
-    min-width: 200px; /* Set minimum width for the sidebar */
-    background-color: #0AD1C8; /* Change background color for better contrast */
-    color: white; /* White text for the sidebar */
-    padding: 20px; /* Padding around the sidebar */
-    height: 100vh; /* Full height */
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Optional shadow effect */
-    display: flex;
-    flex-direction: column; /* Arrange items in a column */
+    width: 250px; /* Default width for sidebar */
+    transition: width 0.3s ease; /* Smooth transition for sidebar resizing */
+    position: fixed; /* Fix the sidebar */
+    height: 100vh; /* Maintain full height */
+    display: flex; /* Use flexbox for logo and nav items */
+    flex-direction: column; /* Arrange items vertically */
+    z-index: 1000; /* Ensure the sidebar is above other content */
 }
 
+    /* Ensure the sidebar does not scroll */
+    .sidebar.shrink {
+        width: 70px; /* Shrunk width for the sidebar */
+    }
+
+/* Toggle button styling */
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition for toggle button */
+}
+
+.sidebar.shrink .toggle-btn {
+    transform: rotate(180deg); /* Rotate the toggle button when sidebar is shrunk */
+}
+
+/* Lighter card background colors */
+.card.bg-info {
+    background-color: rgba(23, 162, 184, 0.7); /* Lighter info background */
+}
+
+.card.bg-warning {
+    background-color: rgba(255, 193, 7, 0.7); /* Lighter warning background */
+}
+
+.card.bg-danger {
+    background-color: rgba(220, 53, 69, 0.7); /* Lighter danger background */
+}
+
+/* Logo container styling */
 .logo-container {
     text-align: center; /* Center the logo and text */
-    margin-bottom: 20px; /* Space between the logo and nav items */
+    margin-bottom: 5px; /* Space between the logo and nav items now set to 5px */
 }
 
 .logo {
     width: 150px; /* Logo width */
-    height: 150px; /* Logo height */
+    height: auto; /* Maintain aspect ratio for logo height */
 }
 
+/* Adjust logo text visibility based on sidebar state */
 .logo-text {
-    font-size: 24px; /* Font size for the text */
-    color: white; /* Text color */
+    font-size: 18px; /* Font size for logo text */
+    color: black; /* Text color */
 }
 
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+.sidebar.shrink .logo-text {
+    display: none; /* Hide logo text when shrunk */
 }
 
-ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
+h2.margin {
+    margin-top: 20px; /* Set 5px margin from the top */
+}
+
+.nav {
     flex-grow: 1; /* Allow this section to grow */
 }
 
-li {
-    margin: 15px 0; /* Space between items */
-}
-
-a {
-    text-decoration: none; /* Remove underline */
-    color: white; /* Change link color to white */
-    display: flex; /* Use flex to align icon and text */
-    align-items: center; /* Center align items vertically */
-    transition: color 0.3s ease; /* Smooth transition effect */
-    padding: 10px; /* Padding for clickable area */
-}
-
-i {
-    margin-right: 10px; /* Space between icon and text */
-}
-
 .nav-item {
-    margin-left: 5px; /* Space between icon and text */
+    margin-bottom: 15px; /* Consistent gap between items */
 }
 
-/* Change color of both text and icon on hover */
-a:hover {
-    color: #FFD846; /* Change color of both text and icon on hover */
-}
-
-/* Styles for navigation links */
+/* Optional: If you want to specifically style the registered parents and parent participation items */
 .nav-link {
-    color: white; /* White text for links */
+    padding: 10px; /* Ensuring consistent padding for clickable area */
+    text-decoration: none; /* Removing underline */
+    color: black; /* Default text color */
+    display: flex; /* Flex layout for icon and text */
+    align-items: center; /* Center items vertically */
 }
 
-.nav-link:hover {
-    background-color: #495057; /* Darker background on hover */
+    /* Ensure active link color is consistent */
+    .nav-link.active {
+        font-weight: bold; /* Highlight active link */
+    }
+
+    .nav-link i {
+        margin-right: 10px; /* Space between icon and text */
+    }
+
+    /* Change color of both text and icon on hover */
+    .nav-link:hover {
+        color: #FFD846; /* Change color on hover */
+    }
+
+/* Hide text when sidebar shrinks */
+.sidebar.shrink .nav-link span {
+    display: none; /* Hide text when shrunk */
 }
 
-/* Dropdown styles */
+.sidebar.shrink .nav-link i {
+    margin-right: 0; /* Remove margin to center icons */
+}
+
+/* Dropdown menu styling */
 .dropdown-menu {
-    background-color: #495057; /* Darker background for dropdown */
+    background-color: #f8f9fa; /* Keep dropdown menu consistent */
+    padding-left: 15px; /* Adjust alignment of dropdown items */
+    font-size: 12px; /* Set default font size to 12px */
 }
 
-.dropdown-item {
-    color: white; /* White text for dropdown items */
-}
-
-.dropdown-item:hover {
-    background-color: #6c757d; /* Highlighted background on hover */
-}
-
-/* Content area styling */
-.content {
+/* Statistics section styling */
+.container {
     flex-grow: 1; /* Allow content to grow and fill space */
     padding: 20px; /* Padding for the content area */
-    background-color: #f8f9fa; /* Light background for content area */
+    background-color: #f8f9fa; /* Light background for content */
+    margin-left: 250px; /* Create space for the sidebar */
+    height: 100vh; /* Full height for content */
+    overflow-y: auto; /* Allow scrolling in the content area */
 }
 
-/* Designer Rectangle */
-.designer-rectangle {
-    width: 980px; /* Set width to 980 pixels */
-    height: 500px; /* Set height to 500 pixels */
-    background-color: #9874BD; /* Background color */
-    border-radius: 5px; /* Slightly rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    margin-top: 20px; /* Space above the rectangle */
-    display: flex; /* Flexbox to center content */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    color: white; /* Text color */
-    font-size: 16px; /* Font size */
+main {
+    padding: 5px; /* Add padding for inner spacing */
+}
+
+.pending-container {
+    width: 50%; /* Set width to 50% */
+    margin-top: 20px; /* Add top margin for spacing */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto; /* Center the container horizontally */
+}
+
+.card {
+    width: 100%; /* Ensure the card takes the full width of its parent */
+}
+
+/* Event Form Section Styling */
+.event-form-section {
+    position: fixed; /* Fix the position */
+    top: 20px; /* Set a fixed distance from the top of the viewport */
+    left: 270px; /* 250px (sidebar width) + 20px (spacing) */
+    width: 50%; /* Set width to 50% of the content area */
+    max-width: 800px; /* Optional: set a max-width for larger screens */
+    height: auto; /* Set to auto to adjust height based on content */
+    max-height: calc(90vh - 40px); /* Limit height to 90% of viewport minus some padding */
+    overflow: visible; /* Ensure that overflow is visible */
+    padding: 20px; /* Add padding for inner spacing */
+    background-color: #f8f9fa; /* Optional: background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for elevation effect */
+    z-index: 100; /* Ensure it appears above other elements */
 }

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model ChildPreregistrationViewModel 
+
+@{
     Layout = null;
 }
 
@@ -13,10 +15,10 @@
 </head>
 <body class="container mt-5">
 
-        <!-- CSN Logo -->
-        <div class="text-center mb-4">
-            <img src="../images/csnlogo.png" alt="CSN Logo" class="img-fluid" style="max-width: 200px;">
-        </div>
+    <!-- CSN Logo -->
+    <div class="text-center mb-4">
+        <img src="../images/csnlogo.png" alt="CSN Logo" class="img-fluid" style="max-width: 200px;">
+    </div>
 
     <h2 class="text-center mb-4">Child Pre-Registration Form</h2>
 
@@ -30,66 +32,70 @@
 
     <form id="preregForm" method="post" action="@Url.Action("Prereg3", "Prereg")">
         <!-- Update to your next page -->
-
         <!-- Regular Check-Up Section -->
         <div class="form-group mb-3">
             <label>Regular Check-Up:</label>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="checkup-yes" name="regular-checkup" value="Yes" required>
+                <input class="form-check-input" type="radio" id="checkup-yes" name="RegularCheckup" value="true" @(Model.RegularCheckup ? "checked" : "") required>
                 <label class="form-check-label" for="checkup-yes">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="checkup-no" name="regular-checkup" value="No" required>
+                <input class="form-check-input" type="radio" id="checkup-no" name="RegularCheckup" value="false" @(!Model.RegularCheckup ? "checked" : "") required>
                 <label class="form-check-label" for="checkup-no">No</label>
             </div>
         </div>
-
         <!-- Medicine Currently Being Taken Section -->
         <div class="form-group mb-3">
             <label for="medicine">Medicine/s that is/are currently being taken by the child:</label>
-            <input type="text" class="form-control" id="medicine" name="medicine" placeholder="Enter medicine/s">
+            <input type="text" class="form-control" id="medicine" name="Medicines" value="@Model.Medicines" placeholder="Enter medicine/s">
         </div>
 
         <!-- Does the Child Have Illness Section -->
         <div class="form-group mb-3">
             <label>Does the child have an illness?</label>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="illness-yes" name="child-illness" value="Yes" required>
+                <input class="form-check-input" type="radio" id="illness-yes" name="Illness" value="true" @if (Model.Illness)
+                {
+                    <text>checked</text>
+                } required>
                 <label class="form-check-label" for="illness-yes">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="illness-no" name="child-illness" value="No" required>
+                <input class="form-check-input" type="radio" id="illness-no" name="Illness" value="false" @if (!Model.Illness)
+                {
+                    <text>checked</text>
+                } required>
                 <label class="form-check-label" for="illness-no">No</label>
             </div>
         </div>
 
         <!-- Illness Details Input -->
-        <div class="form-group mb-3" id="illness-details" style="display:none;">
+        <div class="form-group mb-3" id="illness-details" style="display:@(Model.Illness ? "block" : "none")">
             <label for="illness-info">Please specify the illness:</label>
-            <input type="text" class="form-control" id="illness-info" name="illness-info" placeholder="Enter illness details">
+            <input type="text" class="form-control" id="illness-info" name="IllnessInfo" value="@Model.IllnessInfo" placeholder="Enter illness details">
         </div>
 
         <!-- Difficulties Section -->
         <div class="form-group mb-3">
             <label>Describe where the person with a disability is having difficulties. Select all that apply:</label>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="difficulty-movement" name="difficulty" value="Movement">
+                <input class="form-check-input" type="checkbox" id="difficulty-movement" name="DisabilityDifficulties" value="Movement" @(Model.DisabilityDifficulties.Contains("Movement") ? "checked" : "")>
                 <label class="form-check-label" for="difficulty-movement">Movement</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="difficulty-senses" name="difficulty" value="Senses">
+                <input class="form-check-input" type="checkbox" id="difficulty-senses" name="DisabilityDifficulties" value="Senses" @(Model.DisabilityDifficulties.Contains("Senses") ? "checked" : "")>
                 <label class="form-check-label" for="difficulty-senses">Senses</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="difficulty-behavior" name="difficulty" value="Behavior/Conduct">
+                <input class="form-check-input" type="checkbox" id="difficulty-behavior" name="DisabilityDifficulties" value="Behavior/Conduct" @(Model.DisabilityDifficulties.Contains("Behavior/Conduct") ? "checked" : "")>
                 <label class="form-check-label" for="difficulty-behavior">Behavior/Conduct</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="difficulty-thinking" name="difficulty" value="Thinking">
+                <input class="form-check-input" type="checkbox" id="difficulty-thinking" name="DisabilityDifficulties" value="Thinking" @(Model.DisabilityDifficulties.Contains("Thinking") ? "checked" : "")>
                 <label class="form-check-label" for="difficulty-thinking">Thinking</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="difficulty-speaking" name="difficulty" value="Speaking/Communication">
+                <input class="form-check-input" type="checkbox" id="difficulty-speaking" name="DisabilityDifficulties" value="Speaking/Communication" @(Model.DisabilityDifficulties.Contains("Speaking/Communication") ? "checked" : "")>
                 <label class="form-check-label" for="difficulty-speaking">Speaking/Communication</label>
             </div>
         </div>
@@ -100,31 +106,23 @@
                 <button type="button" class="btn btn-secondary" onclick="goBack()">Back</button>
             </div>
             <div class="col-md-6 text-right">
-                <button type="button" class="btn btn-primary" onclick="goNext()">Next</button>
+                <button type="submit" class="btn btn-primary">Next</button>
             </div>
         </div>
 
     </form>
-    <script>
-        function goBack() {
-            // Logic to go back to the previous page
-            window.history.back(); // This will take the user to the previous page
-        }
 
-        function goNext() {
-            console.log("Next button clicked!"); // Debugging line
-            // Optionally perform any necessary validation or data handling here
-            // Navigate to Prereg4 action
-            window.location.href = '@Url.Action("Prereg4", "Prereg")'; // This navigates to the Prereg3 action
-        }
-    </script>
     <script>
-        // Show illness details input based on the selection
-        document.querySelectorAll('input[name="child-illness"]').forEach((elem) => {
-            elem.addEventListener("change", function(event) {
+                    function goBack() {
+                    window.history.back(); // This will take the user to the previous page
+                }
+
+                // Show illness details input based on the selection
+        document.querySelectorAll('input[name="Illness"]').forEach((elem) => {
+            elem.addEventListener("change", function (event) {
                 const illnessDetails = document.getElementById('illness-details');
-                illnessDetails.style.display = event.target.value === 'Yes' ? 'block' : 'none';
-            });
+                illnessDetails.style.display = event.target.value === 'true' ? 'block' : 'none';
+                    });
         });
     </script>
 
