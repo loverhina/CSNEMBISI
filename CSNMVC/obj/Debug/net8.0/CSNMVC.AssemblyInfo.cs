@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSNMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66d322ec37b369ae75c542dae8bdeee9fac4d4a3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11f155551c5f11cb165e009ecbad73644c4cdb40")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSNMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSNMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

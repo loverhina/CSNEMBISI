@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\wwwroot\\js\\home\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\wwwroot\\js\\home\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\models\\commonentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\models\\commonentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\models\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\models\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\controllers\\preregcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\controllers\\preregcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\views\\prereg\\prereg.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\views\\prereg\\prereg.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,20 +39,12 @@
       "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\views\\prereg\\prereg3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\controllers\\preregcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\controllers\\preregcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\models\\viewmodels\\childpreregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\models\\viewmodels\\childpreregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\views\\prereg\\prereg2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\views\\prereg\\prereg2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|solutionrelative:csnmvc\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74B9E09D-51D5-4CA5-BCAB-8C14EFA15145}|CSNMVC\\CSNMVC.csproj|c:\\users\\mark\\documents\\github\\csnembisi\\csnmvc\\csnmvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -58,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +90,72 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "CSNMVC\\Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "CSNMVC\\Views\\Home\\Login.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAwDgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-08T10:40:59.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CommonEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Models\\CommonEntity.cs",
+              "RelativeDocumentMoniker": "CSNMVC\\Models\\CommonEntity.cs",
+              "ToolTip": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Models\\CommonEntity.cs",
+              "RelativeToolTip": "CSNMVC\\Models\\CommonEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T10:38:39.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Models\\UserEntity.cs",
+              "RelativeDocumentMoniker": "CSNMVC\\Models\\UserEntity.cs",
+              "ToolTip": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Models\\UserEntity.cs",
+              "RelativeToolTip": "CSNMVC\\Models\\UserEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T10:37:54.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "CSNMVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "CSNMVC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T10:36:48.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Login.js",
+              "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\wwwroot\\js\\Home\\Login.js",
+              "RelativeDocumentMoniker": "CSNMVC\\wwwroot\\js\\Home\\Login.js",
+              "ToolTip": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\wwwroot\\js\\Home\\Login.js",
+              "RelativeToolTip": "CSNMVC\\wwwroot\\js\\Home\\Login.js",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowC0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-08T10:35:24.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Prereg3.cshtml",
               "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Views\\Prereg\\Prereg3.cshtml",
               "RelativeDocumentMoniker": "CSNMVC\\Views\\Prereg\\Prereg3.cshtml",
@@ -78,25 +163,23 @@
               "RelativeToolTip": "CSNMVC\\Views\\Prereg\\Prereg3.cshtml",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-07T19:07:15.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T19:07:15.462Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CSNMVC",
+              "DocumentIndex": 11,
+              "Title": "CSNMVC.csproj",
               "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\CSNMVC.csproj",
               "RelativeDocumentMoniker": "CSNMVC\\CSNMVC.csproj",
               "ToolTip": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\CSNMVC.csproj",
               "RelativeToolTip": "CSNMVC\\CSNMVC.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-07T18:54:46.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T18:54:46.787Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Program.cs",
               "RelativeDocumentMoniker": "CSNMVC\\Program.cs",
@@ -104,12 +187,11 @@
               "RelativeToolTip": "CSNMVC\\Program.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T18:41:49.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T18:41:49.299Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "styles_admin.css",
               "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\wwwroot\\css\\styles_admin.css",
               "RelativeDocumentMoniker": "CSNMVC\\wwwroot\\css\\styles_admin.css",
@@ -117,12 +199,11 @@
               "RelativeToolTip": "CSNMVC\\wwwroot\\css\\styles_admin.css",
               "ViewState": "AgIAAIYAAAAAAAAAAAAcwKMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-07T16:52:17.479Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T16:52:17.479Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "ChildInfo.cs",
               "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Models\\ChildInfo.cs",
               "RelativeDocumentMoniker": "CSNMVC\\Models\\ChildInfo.cs",
@@ -130,12 +211,11 @@
               "RelativeToolTip": "CSNMVC\\Models\\ChildInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T16:25:38.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T16:25:38.415Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Prereg2.js",
               "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\wwwroot\\js\\Prereg\\Prereg2.js",
               "RelativeDocumentMoniker": "CSNMVC\\wwwroot\\js\\Prereg\\Prereg2.js",
@@ -143,12 +223,11 @@
               "RelativeToolTip": "CSNMVC\\wwwroot\\js\\Prereg\\Prereg2.js",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwDIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-07T14:52:52.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T14:52:52.92Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "Prereg2.cshtml",
               "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Views\\Prereg\\Prereg2.cshtml",
               "RelativeDocumentMoniker": "CSNMVC\\Views\\Prereg\\Prereg2.cshtml",
@@ -156,8 +235,7 @@
               "RelativeToolTip": "CSNMVC\\Views\\Prereg\\Prereg2.cshtml",
               "ViewState": "AgIAAKYAAAAAAAAAAAAAALYAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-07T13:25:38.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T13:25:38.354Z"
             },
             {
               "$type": "Document",
@@ -167,14 +245,14 @@
               "RelativeDocumentMoniker": "CSNMVC\\Models\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Models\\ApplicationDbContext.cs",
               "RelativeToolTip": "CSNMVC\\Models\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAswF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T13:12:20.683Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "ChildPreregistration.cs",
               "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Models\\ViewModels\\ChildPreregistration.cs",
               "RelativeDocumentMoniker": "CSNMVC\\Models\\ViewModels\\ChildPreregistration.cs",
@@ -182,12 +260,11 @@
               "RelativeToolTip": "CSNMVC\\Models\\ViewModels\\ChildPreregistration.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAuwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T13:05:38.65Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T13:05:38.65Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "Prereg.js",
               "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\wwwroot\\js\\Prereg\\Prereg.js",
               "RelativeDocumentMoniker": "CSNMVC\\wwwroot\\js\\Prereg\\Prereg.js",
@@ -195,12 +272,11 @@
               "RelativeToolTip": "CSNMVC\\wwwroot\\js\\Prereg\\Prereg.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-07T12:12:53.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-07T12:12:53.083Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "PreregController.cs",
               "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Controllers\\PreregController.cs",
               "RelativeDocumentMoniker": "CSNMVC\\Controllers\\PreregController.cs",
@@ -213,13 +289,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Prereg.cshtml",
               "DocumentMoniker": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Views\\Prereg\\Prereg.cshtml",
               "RelativeDocumentMoniker": "CSNMVC\\Views\\Prereg\\Prereg.cshtml",
               "ToolTip": "C:\\Users\\Mark\\Documents\\GitHub\\CSNEMBISI\\CSNMVC\\Views\\Prereg\\Prereg.cshtml",
               "RelativeToolTip": "CSNMVC\\Views\\Prereg\\Prereg.cshtml",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHgAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-07T11:52:39.438Z",
               "EditorCaption": ""
