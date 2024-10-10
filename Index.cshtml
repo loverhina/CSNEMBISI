@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-4">Dashboard</h1>
+        </div>
+    </div>
+
+    <!-- First Row: Inbox -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card inbox-modern border-0 shadow-sm rounded">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="card-title">Inbox</h5>
+                        <p class="card-text">@ViewBag.InboxMessage</p>
+                    </div>
+                    <i class="fas fa-envelope fa-2x text-muted"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Row: Events and Announcements -->
+    <div class="row">
+        <div class="col-12 col-md-6 mb-4">
+            <div class="card upcoming-events-modern border-0 shadow-sm rounded">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="card-title">Upcoming Events</h5>
+                        <p class="card-text">@ViewBag.UpcomingEvent</p>
+                    </div>
+                    <i class="fas fa-calendar-alt fa-2x text-muted"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 mb-4">
+            <div class="card announcements-modern border-0 shadow-sm rounded">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="card-title">Announcements</h5>
+                        <p class="card-text">@ViewBag.Announcement</p>
+                    </div>
+                    <i class="fas fa-bullhorn fa-2x text-muted"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
